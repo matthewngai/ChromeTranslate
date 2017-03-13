@@ -1,0 +1,39 @@
+#chromeextensionpopup{
+    display: inline-table;
+    background: white;
+    border: solid 1px #bbbbbb;
+    line-height: normal;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 20px;
+    max-height: 450px;
+    overflow: auto;
+    z-index: 999999999;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 1px #888888;
+    padding: 5px 5px 5px 5px;
+    color: black;
+}
+
+#chromeextensionpopupcloselink{
+    float:right;
+    background: white;
+    color: black;
+    cursor: pointer;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+    position: relative;
+
+}
+
+#displaytextstyle {
+  float:left;
+  max-width: 400px;
+  min-width: 200px;
+  word-wrap: break-word;
+  overflow: auto;
+  position: relative;
+
+}

@@ -1,0 +1,83 @@
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Chrome Translator</title>
+    <style>
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: normal;
+        overflow: auto;
+        max-width: 300px;
+        font-size: 12px;
+      }
+      #myFrame {
+        max-width: 300px;
+        min-width: 170px;
+      }
+      .btnx {
+          background-color: #e7e7e7;
+          color: black;
+          border: none;
+          padding: 4px 4px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+      .paddingPopup {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .paddingSeperator {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 4px;
+      }
+      .spacingTop {
+        padding-top: 8px;
+      }
+      .voice_label {
+
+      }
+      .voice_wrap {
+        max-width: 170px;
+        overflow: hidden;
+      }
+    </style>
+
+    <script src="/popup.js"></script>
+    <script src="/content_script.js"></script>
+  </head>
+  <body>
+    <div id="myFrame">
+      <div>Chrome Translator</div>
+      <div class="paddingSeperator"></div>
+      <div class="spacingTop"></div>
+      <div id="status">
+
+        <button class="btnx" id="onoffswitchtoggle"></button>
+
+        <div class="paddingPopup"></div>
+
+        <button class="btnx" id="voiceswitchtoggle"></button>
+      <div class="voice_label">
+        <label for="voice">Language:</label>
+      </div>
+      <div class="">
+        <select id="voiceChromeTranslator" class="voice_wrap"></select>
+      </div>
+
+      </div>
+    </div>
+  </body>
+</html>
