@@ -5,17 +5,17 @@
   function switchVoice() {
     if (localStorage['gender'] == 'male') {
       localStorage['gender'] = 'female';
-      document.getElementById("voiceswitchtoggle").innerHTML = 'female';
+      document.getElementById("voiceswitchtoggle").innerText = 'female';
     } else {
       localStorage['gender'] = 'male';
-      document.getElementById("voiceswitchtoggle").innerHTML = 'male';
+      document.getElementById("voiceswitchtoggle").innerText = 'male';
     }
   }
 
   function switchButton() {
     if (localStorage['switch'] == 'On') {
       localStorage['switch'] = 'Off';
-      document.getElementById("onoffswitchtoggle").innerHTML = 'Off';
+      document.getElementById("onoffswitchtoggle").innerText = 'Off';
       document.getElementById("voiceswitchtoggle").disabled = true;
       document.getElementById("voiceChromeTranslator").disabled = true;
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
@@ -23,7 +23,7 @@
       });
     } else if (localStorage['switch'] == 'Off') {
       localStorage['switch'] = 'On';
-      document.getElementById("onoffswitchtoggle").innerHTML = 'On';
+      document.getElementById("onoffswitchtoggle").innerText = 'On';
       document.getElementById("voiceswitchtoggle").disabled = false;
       document.getElementById("voiceChromeTranslator").disabled = false;
 
@@ -32,7 +32,7 @@
       });
     } else {
       localStorage['switch'] = 'Off';
-      document.getElementById("onoffswitchtoggle").innerHTML = 'Off';
+      document.getElementById("onoffswitchtoggle").innerText = 'Off';
       document.getElementById("voiceswitchtoggle").disabled = true;
       document.getElementById("voiceChromeTranslator").disabled = true;
     }
@@ -62,10 +62,10 @@
 }
 
 function loadListeners() {
-  document.getElementById("onoffswitchtoggle").innerHTML = localStorage["switch"] || 'Off';
+  document.getElementById("onoffswitchtoggle").innerText = localStorage["switch"] || 'Off';
   localStorage["switch"] = localStorage["switch"] || 'Off';
   console.log(localStorage["switch"]);
-  document.getElementById("voiceswitchtoggle").innerHTML = localStorage["gender"] || 'female';
+  document.getElementById("voiceswitchtoggle").innerText = localStorage["gender"] || 'female';
   localStorage["gender"] = localStorage["gender"] || 'female';
   if (localStorage["switch"] == 'Off') {
     document.getElementById("voiceswitchtoggle").disabled = true;
