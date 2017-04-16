@@ -1,5 +1,14 @@
 var keyMap;
 
+function htmlEscape(str) {
+      return String(str)
+              .replace(/&/g, '&amp;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#39;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;');
+}
+
 function yandexTrans(url, resultCallback, errorCallback) {
   var settings = {
     "async": true,
@@ -11,7 +20,9 @@ function yandexTrans(url, resultCallback, errorCallback) {
     }
   }
   $.ajax(settings).done(function (response) {
-    resultCallback(response.text[0]);
+    var responseText = htmlEscape(response.text[0]);
+    responseText = responseText.replace(/[\n]/g,"<BR>");
+    resultCallback(responseText);
   });
 }
 
