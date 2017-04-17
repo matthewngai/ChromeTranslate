@@ -57,14 +57,12 @@
   voice.addEventListener('change', function() {
     var i = voice.selectedIndex;
     localStorage['voice'] = voiceArray[i].voiceName;
-    console.log(localStorage['voice']);
   }, false);
 }
 
 function loadListeners() {
   document.getElementById("onoffswitchtoggle").innerText = localStorage["switch"] || 'Off';
   localStorage["switch"] = localStorage["switch"] || 'Off';
-  console.log(localStorage["switch"]);
   document.getElementById("voiceswitchtoggle").innerText = localStorage["gender"] || 'female';
   localStorage["gender"] = localStorage["gender"] || 'female';
   if (localStorage["switch"] == 'Off') {
@@ -85,7 +83,6 @@ function loadListeners() {
     });
   }
   else {
-    console.log('here');
     document.getElementById("voiceswitchtoggle").disabled = true;
     document.getElementById("voiceChromeTranslator").disabled = true;
     localStorage["switch"] = 'Off';
