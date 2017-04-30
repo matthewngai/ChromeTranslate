@@ -3,7 +3,6 @@
     "<all_urls>",
     "tts",
     "tabs"
-    // "activeTab",
   ],
   "manifest_version": 2,
   "background": {
@@ -12,13 +11,11 @@
   "name": "Chrome Translator",
   "description": "Translator with text to speech.",
   "version": "1.0",
-  //http://icons.iconarchive.com/icons/igh0zt/ios7-style-metro-ui/64/MetroUI-Google-Translate-icon.png
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "Chrome Translation",
     "default_icon": "icon.png"
   },
-  // "options_page": "options.html",
   "minimum_chrome_version": "14",
   "web_accessible_resources": [
       "images/*.png"
