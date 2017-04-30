@@ -1,4 +1,4 @@
-# ChromeTranslate
+# Chrome Translator
 
 Chrome extension that translates highlighted words with text to speech voice.
 
